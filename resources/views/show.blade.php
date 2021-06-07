@@ -22,8 +22,8 @@
                                     <td>{{$data->jumlah}}</td>
                                     <td>{{$data->status}}</td>
                                     <td>{{$data->created_at->format('D-m-y')}}</td>
+                                </tbody>
                                 @endforeach
-                            </tbody>
                         </table>
                     </div>
                 </div>
