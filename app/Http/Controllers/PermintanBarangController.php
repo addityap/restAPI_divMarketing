@@ -23,7 +23,7 @@ class PermintanBarangController extends Controller
             'message' => 'List Data Transaction Sort by Time',
             'data' => $permintaan
         ];
-        return response()->json($permintaan, Response::HTTP_OK);
+        return view('show',compact('permintaan'));
     }
 
     public function indexs(){
