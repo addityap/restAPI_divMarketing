@@ -12,13 +12,10 @@
                     <div class="alert alert-success" role="alert">
                         {{session('success')}}
                 @endif
-
                 </div>
-                <div class="row">
-                    <div class="text-end mt-3">
+                    <div class="text-end mt-3 mr-5">
                         <a href="{{route('permintaanbrg.index')}}" class="btn btn-success">Show Data</a>
                     </div>
-                </div>
                 <div class="card-body">
                 <form action="{{route('permintaanbrg.store')}}" method="POST">
                 @csrf
