@@ -13,7 +13,7 @@
                         {{session('success')}}
                 @endif
                 </div>
-                    <div class="text-end mt-3 mr-5">
+                    <div class="text-end mt-3 mr-3">
                         <a href="{{route('permintaanbrg.index')}}" class="btn btn-success">Show Data</a>
                     </div>
                 <div class="card-body">
