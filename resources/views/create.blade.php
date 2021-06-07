@@ -8,15 +8,17 @@
                 <div class="card-header">
                     Form Permintaan barang    
                 </div>
-                <div class="row ml-auto">
-                    <a href="{{route('permintaanbrg.index')}}" class="btn btn-success">Show Data</a>
+                <div class="row">
+                    <div class="ml-auto">
+                        <a href="{{route('permintaanbrg.index')}}" class="btn btn-success">Show Data</a>
+                    </div>
                 </div>
                 <div class="card-body">
                 <form action="{{route('permintaanbrg.store')}}" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="nama">Nama</label>
-                    <input type="text" id="nama" name="nama" class="form-control">
+                    <input type="text" id="nama" name="namabarang" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="jumlah">Jumlah Barang</label>
