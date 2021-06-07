@@ -26,6 +26,10 @@ class PermintanBarangController extends Controller
         return response()->json($permintaan, Response::HTTP_OK);
     }
 
+    public function indexs(){
+        return view('create');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

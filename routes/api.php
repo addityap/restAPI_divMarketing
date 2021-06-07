@@ -26,3 +26,5 @@ Route::post('/permintaanbrg', [PermintanBarangController::class,'store']);
 Route::get('/permintaanbrg/{PermintaanBarang:id}', [PermintanBarangController::class,'show']);
 Route::delete('/permintaanbrg/{PermintaanBarang:id}', [PermintanBarangController::class,'destroy']);
 Route::put('/permintaanbrg/{PermintaanBarang:id}', [PermintanBarangController::class,'update']);
+
+Route::get('/create',[PermintanBarangController::class,'indexs']);
