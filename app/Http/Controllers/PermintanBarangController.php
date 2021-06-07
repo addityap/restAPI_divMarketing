@@ -65,7 +65,7 @@ class PermintanBarangController extends Controller
                 'data' => $permintaan
             ];
 
-            return response()->json($response, Response::HTTP_CREATED);
+            return redirect()->back()->with('succes','Data has created!');
         } catch (QueryException $e) {
             //throw $th;
             return response()->json([

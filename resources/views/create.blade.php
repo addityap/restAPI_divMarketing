@@ -8,8 +8,14 @@
                 <div class="card-header">
                     Form Permintaan barang    
                 </div>
+                @if (session('success'))    
+                    <div class="alert alert-success" role="alert">
+                        {{session('success')}}
+                @endif
+
+                </div>
                 <div class="row">
-                    <div class="ml-auto">
+                    <div class="ml-end mr-5">
                         <a href="{{route('permintaanbrg.index')}}" class="btn btn-success">Show Data</a>
                     </div>
                 </div>
@@ -24,7 +30,11 @@
                     <label for="jumlah">Jumlah Barang</label>
                     <input type="text" id="jumlah" name="jumlah" class="form-control">
                 </div>
-                <button class="btn btn-primary" type="submit">Process</button>
+                <div class="row">
+                    <div class="ml-end mr-5">
+                        <button class="btn btn-primary" type="submit">Process Data</button>
+                    </div>
+                </div>
                 </form>    
                 </div>    
             </div>    
