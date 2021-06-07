@@ -5,6 +5,7 @@
         <div class="d-flex justify-content-center">
             <div class="card w-100 shadow">
                 <div class="card-body">
+                    <div class="card-title text-center">Show Data Dari Yang Terbaru</div>
                     <div class="table-responsive">
                         <table class="table align-items-center table-hover">
                             <th>No</th>
