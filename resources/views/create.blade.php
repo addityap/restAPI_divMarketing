@@ -8,12 +8,11 @@
                 <div class="card-header">
                     Form Permintaan barang    
                 </div>
-                <div class="row">
-                    <a href="{{url('/permintaanbrg')}}" class="btn btn-success">Show Data</a>
-                    @method('get') 
+                <div class="row ml-auto">
+                    <a href="{{route('permintaanbrg.index')}}" class="btn btn-success">Show Data</a>
                 </div>
                 <div class="card-body">
-                <form action="{{url('/permintaanbrg')}}" method="POST">
+                <form action="{{route('permintaanbrg.store')}}" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="nama">Nama</label>
