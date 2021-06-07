@@ -31,7 +31,7 @@
                     <input type="text" id="jumlah" name="jumlah" class="form-control">
                 </div>
                 <div class="row">
-                    <div class="ml-end mr-5">
+                    <div class="text-end">
                         <button class="btn btn-primary" type="submit">Process Data</button>
                     </div>
                 </div>
