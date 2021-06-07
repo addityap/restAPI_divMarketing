@@ -9,14 +9,15 @@
                     Form Permintaan barang    
                 </div>
                 @if (session('success'))    
-                    <div class="alert alert-success" role="alert">
+                <div class="alert alert-success" role="alert">
                         {{session('success')}}
                 @endif
                 </div>
+                   
+                <div class="card-body">
                     <div class="text-end mt-3 mr-3">
                         <a href="{{route('permintaanbrg.index')}}" class="btn btn-success">Show Data</a>
                     </div>
-                <div class="card-body">
                 <form action="{{route('permintaanbrg.store')}}" method="POST">
                 @csrf
                 <div class="form-group">
