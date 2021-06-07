@@ -3,7 +3,7 @@
 <div class="container py-4">
     <div class="row">
     <div class="d-flex justify-content-center">
-        <div class="card w-100">
+        <div class="card w-100 shadow">
             <div class="card">
                 <div class="card-header">
                     Form Permintaan barang    
@@ -15,7 +15,7 @@
 
                 </div>
                 <div class="row">
-                    <div class="ml-end mr-5">
+                    <div class="text-end mt-3">
                         <a href="{{route('permintaanbrg.index')}}" class="btn btn-success">Show Data</a>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                     <input type="text" id="jumlah" name="jumlah" class="form-control">
                 </div>
                 <div class="row">
-                    <div class="text-end">
+                    <div class="text-end mt-2">
                         <button class="btn btn-primary" type="submit">Process Data</button>
                     </div>
                 </div>
