@@ -27,7 +27,7 @@ Route::post('/permintaanbrg', [PermintanBarangController::class,'store'])->name(
 Route::get('/permintaanbrg/{PermintaanBarang:id}', [PermintanBarangController::class,'show'])->name('permintaanbrg.show');
 Route::delete('/permintaanbrg/{PermintaanBarang:id}', [PermintanBarangController::class,'destroy'])->name('permintaanbrg.destroy');
 Route::put('/permintaanbrg/{PermintaanBarang:id}', [PermintanBarangController::class,'update'])->name('permintaanbrg.update');
-Route::patch('/approvebrg/{PermintaanBarang:id}',[PermintaanBarangController::class,'approval'])->name('permintaanbrg.approve');
+Route::patch('/approvebrg/{PermintaanBarang:id}',[PermintanBarangController::class,'approval'])->name('permintaanbrg.approve');
 
 
 Route::get('/create',[PermintanBarangController::class,'indexs']);
