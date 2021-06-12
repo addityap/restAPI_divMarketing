@@ -23,10 +23,11 @@ class PermintanBarangController extends Controller
             'message' => 'List Data Transaction Sort by Time',
             'data' => $permintaan
         ];
-        return view('show',compact('permintaan'));
+        return view('show', compact('permintaan'));
     }
 
-    public function indexs(){
+    public function indexs()
+    {
         return view('create');
     }
 
@@ -51,7 +52,7 @@ class PermintanBarangController extends Controller
         $validator = Validator::make($request->all(), [
             'namabarang' => ['required'],
             'jumlah' => ['required', 'numeric'],
-            
+
         ]);
 
         if ($validator->fails()) {
@@ -65,8 +66,7 @@ class PermintanBarangController extends Controller
                 'data' => $permintaan
             ];
 
-            return redirect('/api/create')->with('success','Data has created!');
-
+            return redirect('/api/create')->with('success', 'Data has created!');
         } catch (QueryException $e) {
             //throw $th;
             return response()->json([
@@ -136,6 +136,21 @@ class PermintanBarangController extends Controller
                 'message' => 'failed update data' . $e->errorInfo
             ]);
         }
+    }
+
+    public function approval(Request $request, $id)
+    {
+        $approval = PermintaanBarang::findorFail($id);
+        $approval->status = "Accept";
+        $approval->save();
+
+        $response = [
+            'message' => "Permintaan Barang Approved",
+            'data' => $approval
+        ];
+
+        return response()->json($response, Response::HTTP_CREATED);
+
     }
 
     /**

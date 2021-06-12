@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PermintanBarangController;
 use App\Http\Controllers\TransactionController;
+use App\Models\PermintaanBarang;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +27,7 @@ Route::post('/permintaanbrg', [PermintanBarangController::class,'store'])->name(
 Route::get('/permintaanbrg/{PermintaanBarang:id}', [PermintanBarangController::class,'show'])->name('permintaanbrg.show');
 Route::delete('/permintaanbrg/{PermintaanBarang:id}', [PermintanBarangController::class,'destroy'])->name('permintaanbrg.destroy');
 Route::put('/permintaanbrg/{PermintaanBarang:id}', [PermintanBarangController::class,'update'])->name('permintaanbrg.update');
+Route::get('/permintaanbrg/{PermintaanBarang:id}',[PermintaanBarangController::class,'approval'])->name('permintaanbrg.approve');
 
 
 Route::get('/create',[PermintanBarangController::class,'indexs']);
