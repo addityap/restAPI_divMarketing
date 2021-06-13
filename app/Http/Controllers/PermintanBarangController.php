@@ -189,13 +189,10 @@ class PermintanBarangController extends Controller
     }
     public function datalogis()
     {
-        $client = new Client;
-        $response = $client->request('GET','https://api-divops.herokuapp.com/api/logistics' , [
-            'verify' => false,
-        ]);
-        $resp = json_decode($response->getBody(), true);
-        dd($resp);
+        $resp= Http::get('https://api-divops.herokuapp.com/api/logistics');
+        $datas = $resp->json();
+        // dd($datas);
 
-        return view('datalogis')->with('resp', $resp);
+        return view('datalogis',compact('datas'));
     }
 }
