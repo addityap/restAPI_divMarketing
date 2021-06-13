@@ -7,6 +7,8 @@ use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator as Validator;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Http;
+use GuzzleHttp\Client;
 
 class PermintanBarangController extends Controller
 {
@@ -150,7 +152,6 @@ class PermintanBarangController extends Controller
         ];
 
         return response()->json($response, Response::HTTP_CREATED);
-
     }
 
     /**
@@ -175,5 +176,16 @@ class PermintanBarangController extends Controller
                 'message' => 'failed' . $e->errorInfo
             ]);
         }
+    }
+    public function datalogis()
+    {
+        $client = new Client;
+        $response = $client->request('GET','https://api-divops.herokuapp.com/api/logistics' , [
+            'verify' => false,
+        ]);
+        $resp = json_decode($response->getBody(), true);
+        dd($resp);
+
+        return view('datalogis')->with('resp', $resp);
     }
 }
