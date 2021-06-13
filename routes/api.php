@@ -25,9 +25,13 @@ Route::post('/permintaanbrg', [PermintanBarangController::class,'store'])->name(
 Route::get('/permintaanbrg/{PermintaanBarang:id}', [PermintanBarangController::class,'show'])->name('permintaanbrg.show');
 Route::delete('/permintaanbrg/{PermintaanBarang:id}', [PermintanBarangController::class,'destroy'])->name('permintaanbrg.destroy');
 Route::put('/permintaanbrg/{PermintaanBarang:id}', [PermintanBarangController::class,'update'])->name('permintaanbrg.update');
+
 Route::get('/approvebrg/{PermintaanBarang:id}',[PermintanBarangController::class,'approval'])->name('permintaanbrg.approve');
 
 Route::get('/datalogis',[PermintanBarangController::class,'datalogis'])->name('logistic');
+Route::get('/datapromosi',[PermintanBarangController::class,'datapromosi'])->name('promosi');
+Route::get('/listpesanan',[PermintanBarangController::class,'listpesanan'])->name('listpesanan');
+Route::get('/pangkat',[PermintanBarangController::class,'pangkat'])->name('pangkat');
 
 
 Route::get('/create',[PermintanBarangController::class,'indexs'])->name('permintaanbrg.create');

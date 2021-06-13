@@ -35,7 +35,7 @@ class PermintanBarangController extends Controller
             'message' => 'List Data Transaction Sort by Time',
             'data' => $permintaan
         ];
-        return response()->json($response,201);
+        return response()->json($response, 201);
     }
 
     public function indexs()
@@ -189,10 +189,22 @@ class PermintanBarangController extends Controller
     }
     public function datalogis()
     {
-        $resp= Http::get('https://api-divops.herokuapp.com/api/logistics');
+        $resp = Http::get('https://api-divops.herokuapp.com/api/logistics');
         $datas = $resp->json();
         // dd($datas);
 
-        return view('datalogis',compact('datas'));
+        return view('datalogis', compact('datas'));
+    }
+    public function datapromosi()
+    {
+        $client = new Client;
+        $response = $client->request('GET','https://stormy-tor-00286.herokuapp.com/api/items', [
+            'verify' => false,
+        ]);
+        $resp = json_decode($response->getBody(), true);
+        // dd($resp);
+
+        return view('datapromosi')->with('resp', $resp);
+
     }
 }

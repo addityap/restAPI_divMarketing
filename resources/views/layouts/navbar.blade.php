@@ -23,7 +23,7 @@
             <a class="nav-link" href="#">List Pesanan</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Promosi</a>
+            <a class="nav-link" href="{{route('promosi')}}">Promosi</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Kenaikan Pangkat</a>
