@@ -19,6 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/barangapis', [PermintanBarangController::class,'apis'])->name('permintaanbrg.apis');
 Route::get('/permintaanbrg', [PermintanBarangController::class,'index'])->name('permintaanbrg.index');
 Route::post('/permintaanbrg', [PermintanBarangController::class,'store'])->name('permintaanbrg.store');
 Route::get('/permintaanbrg/{PermintaanBarang:id}', [PermintanBarangController::class,'show'])->name('permintaanbrg.show');

@@ -27,6 +27,16 @@ class PermintanBarangController extends Controller
         ];
         return view('show', compact('permintaan'));
     }
+    public function apis()
+    {
+        //
+        $permintaan = PermintaanBarang::orderBy('date', 'DESC')->get();
+        $response = [
+            'message' => 'List Data Transaction Sort by Time',
+            'data' => $permintaan
+        ];
+        return response()->json($response,201);
+    }
 
     public function indexs()
     {
