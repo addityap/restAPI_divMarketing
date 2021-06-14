@@ -20,7 +20,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">List Pesanan</a>
+            <a class="nav-link" href="{{route('listpesanan')}}">List Pesanan</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('promosi')}}">Promosi</a>

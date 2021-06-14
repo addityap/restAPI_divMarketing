@@ -198,13 +198,23 @@ class PermintanBarangController extends Controller
     public function datapromosi()
     {
         $client = new Client;
-        $response = $client->request('GET','https://stormy-tor-00286.herokuapp.com/api/items', [
+        $response = $client->request('GET', 'https://stormy-tor-00286.herokuapp.com/api/items', [
             'verify' => false,
         ]);
         $resp = json_decode($response->getBody(), true);
         // dd($resp);
 
         return view('datapromosi')->with('resp', $resp);
+    }
+    public function listpesanan()
+    {
+        $client = new Client;
+        $response = $client->request('GET', 'https://pesanapi.herokuapp.com/api/listpesan', [
+            'verify' => false,
+        ]);
+        $resp = json_decode($response->getBody(), true);
+        // dd($resp);
 
+        return view('listpesanan')->with('resp', $resp);
     }
 }
