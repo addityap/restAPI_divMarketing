@@ -187,11 +187,11 @@ class PermintanBarangController extends Controller
             ]);
         }
     }
-    public function datalogis()
+    public function datalogis(Request $request)
     {
-        $resp = Http::get('https://api-divops.herokuapp.com/api/logistics');
+        $resp = Http::get('http://divoperasioanl.herokuapp.com/api/logistics');
         $datas = $resp->json();
-        // dd($datas);
+        dd($datas);
 
         return view('datalogis', compact('datas'));
     }
@@ -217,4 +217,6 @@ class PermintanBarangController extends Controller
 
         return view('listpesanan')->with('resp', $resp);
     }
+    
+
 }
