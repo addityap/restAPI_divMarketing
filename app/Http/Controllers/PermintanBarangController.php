@@ -191,7 +191,7 @@ class PermintanBarangController extends Controller
     {
         $resp = Http::get('http://divoperasioanl.herokuapp.com/api/logistics');
         $datas = $resp->json();
-        dd($datas);
+        // dd($datas);
 
         return view('datalogis', compact('datas'));
     }
