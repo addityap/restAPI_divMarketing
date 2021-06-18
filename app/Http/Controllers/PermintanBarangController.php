@@ -187,12 +187,11 @@ class PermintanBarangController extends Controller
             ]);
         }
     }
-    public function datalogis(Request $request)
+    public function datalogis()
     {
         $resp = Http::get('http://divoperasioanl.herokuapp.com/api/logistics');
         $datas = $resp->json();
         // dd($datas);
-
         return view('datalogis', compact('datas'));
     }
     public function datapromosi()
