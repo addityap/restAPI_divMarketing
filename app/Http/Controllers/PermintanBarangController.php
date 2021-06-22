@@ -79,7 +79,7 @@ class PermintanBarangController extends Controller
                 'data' => $permintaan
             ];
 
-            return redirect('/api/create')->with('success', 'Data has created!');
+            return response()->json($response, 201);
         } catch (QueryException $e) {
             //throw $th;
             return response()->json([
