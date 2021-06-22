@@ -19,8 +19,18 @@
               <li><a class="dropdown-item" href="{{route('logistic')}}">Data Logistik -Dina</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('listpesanan')}}">List Pesanan</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Pesanan
+            </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="{{route('pesanan')}}">Create Pesanan</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="{{route('listpesanan')}}">List Pesanan</a>
+            </li>
+          </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('promosi')}}">Promosi</a>

@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator as Validator;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Client;
+use Symfony\Component\VarDumper\Caster\RedisCaster;
 
 class PermintanBarangController extends Controller
 {
@@ -216,6 +217,21 @@ class PermintanBarangController extends Controller
 
         return view('listpesanan')->with('resp', $resp);
     }
-    
+    public function pesananUi()
+    {
+        return view('pesananui');
+    }
+    public function postDataPesanan(Request $request)
+    {
+        $response = Http::post('https://pesanapi.herokuapp.com/api/listpesan', [
+            'nama' => $request->nama,
+            'pesanan' => $request->pesanan,
+            'jumlah' => $request->jumlah,
+            'totalharga' => $request->totalharga,
+            'feedback' => $request->feedback,
 
+        ]);
+
+        return redirect()->back();
+    }
 }

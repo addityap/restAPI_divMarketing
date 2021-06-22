@@ -35,3 +35,6 @@ Route::get('/pangkat',[PermintanBarangController::class,'pangkat'])->name('pangk
 
 
 Route::get('/create',[PermintanBarangController::class,'indexs'])->name('permintaanbrg.create');
+
+Route::post('/storepesanan',[PermintanBarangController::class,'postDataPesanan'])->name('storepesanan');
+Route::get('/pesanan',[PermintanBarangController::class,'pesananUi'])->name('pesanan');
