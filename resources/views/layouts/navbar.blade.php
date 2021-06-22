@@ -36,7 +36,10 @@
             <a class="nav-link" href="{{route('promosi')}}">Promosi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Kenaikan Pangkat</a>
+            <a class="nav-link" href="{{route('kenaikan')}}">Kenaikan Pangkat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('hasilpenjualan')}}">Laporan Hasil Penjualan -Finance</a>
           </li>
         </ul>
       </div>

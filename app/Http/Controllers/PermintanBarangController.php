@@ -198,7 +198,7 @@ class PermintanBarangController extends Controller
     public function datapromosi()
     {
         $client = new Client;
-        $response = $client->request('GET', 'https://stormy-tor-00286.herokuapp.com/api/items', [
+        $response = $client->request('GET', 'https://stormy-tor-00286.herokuapp.com/api/barang', [
             'verify' => false,
         ]);
         $resp = json_decode($response->getBody(), true);
@@ -232,6 +232,25 @@ class PermintanBarangController extends Controller
 
         ]);
 
-        return redirect()->back();
+        return redirect()->route('pesanan');
+    }
+    public function hasilPenjualan()
+    {
+        $client = new Client;
+        $response = $client->request('GET', 'https://financeapps.masuk.web.id/api/laporanhasilpenjualan', [
+            'verify' => false,
+        ]);
+        $resp = json_decode($response->getBody(), true);
+        // dd($resp);
+        return view('hasilpenjualan')->with('resp', $resp);
+    }
+    public function kenaikanPangkat()
+    {
+        $response = Http::get('https://zio-api.herokuapp.com/api/kenaikanpangkat',[
+            'verify' => false,
+        ]);
+        $resp = json_decode($response->getBody(), true);
+        // dd($resp);
+        return view('kenaikanlist')->with('resp', $resp);
     }
 }

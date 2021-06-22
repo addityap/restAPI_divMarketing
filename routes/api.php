@@ -38,3 +38,6 @@ Route::get('/create',[PermintanBarangController::class,'indexs'])->name('permint
 
 Route::post('/storepesanan',[PermintanBarangController::class,'postDataPesanan'])->name('storepesanan');
 Route::get('/pesanan',[PermintanBarangController::class,'pesananUi'])->name('pesanan');
+Route::get('/hasilpenjualan',[PermintanBarangController::class,'hasilPenjualan'])->name('hasilpenjualan');
+
+Route::get('/kenaikan',[PermintanBarangController::class,'kenaikanPangkat'])->name('kenaikan');

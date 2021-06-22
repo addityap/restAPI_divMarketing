@@ -8,27 +8,25 @@
                     <thead class="table-dark">
                       <th>No</th>
                       {{-- <th>ID Logistic</th> --}}
-                      <th>Nama Promosi</th>
-                      <th>Description</th>
-                      <th>Date</th>
-                      <th>Duration</th>
-                      <th>Cost</th>
-                      <th>Aproved</th>
+                      <th>Division ID</th>
+                      <th>No Dokumen</th>
+                      <th>Tanggal Masuk Dokumen</th>
+                      <th>Status</th>
+                      <th>Total Keuntungan</th>
                     </thead>
                     <tbody>
                         @php
                             $no=1;
                         @endphp
-                      @foreach ($resp as $api)
+                      @foreach ($resp["data"] as $api)
                           <tr>
                               <td>{{$no++}}</td>
                               {{-- <td>{{$api['id']}}</td> --}}
-                              <td>{{$api['name']}}</td>
-                              <td>{{$api['description']}}</td>
-                              <td>{{$api['date']}}</td>
-                              <td>{{$api['duration']}}</td>
-                              <td>{{$api['cost']}}</td>
-                              <td>{{$api['aprove']}}</td>
+                              <td>{{$api['division_id']}}</td>
+                              <td>{{$api['no_dokumen']}}</td>
+                              <td>{{$api['tanggal_masuk_dokumen']}}</td>
+                              <td>{{$api['status']}}</td>
+                              <td>{{$api['total_keuntungan']}}</td>
                           </tr>
                       @endforeach
                     </tbody>
